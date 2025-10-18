@@ -1,0 +1,211 @@
+<!--
+  Rossercity Web - index.html
+  ---------------------------------
+  Instructions:
+  1) Copie ce fichier comme `index.html` à la racine de ton dépôt `rossercityweb.github.io`.
+  2) Ajoute les images dans un dossier `assets/` (logo.png, project1.png, preview.png).
+  3) Pour contact sans backend, remplace ACTION_FORMSPREE par ton endpoint Formspree (ex: https://formspree.io/f/xxxxx).
+  4) Active GitHub Pages dans les settings (branch: main / root) ou utilise la repo spéciale `rossercityweb.github.io` pour qu'il serve automatiquement.
+  5) Tu peux personnaliser les couleurs / textes / projets.
+--><!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rossercity Web ⚒ʳᶜ — Création de sites modernes</title>
+  <meta name="description" content="Rossercity Web — Création de sites modernes, rapides et responsives par Rossercity ⚒ʳᶜ." />
+  <meta name="keywords" content="Rossercity Web, développement web, portfolio, création site web, freelance" />  <!-- Open Graph / Social preview -->  <meta property="og:title" content="Rossercity Web ⚒ʳᶜ — Création de sites modernes" />
+  <meta property="og:description" content="Création de sites modernes, rapides et responsives par Rossercity ⚒ʳᶜ." />
+  <meta property="og:image" content="assets/preview.png" />
+  <meta property="og:url" content="https://rossercityweb.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />  <!-- Favicon -->  <link rel="icon" href="assets/logo.png" />  <!-- Fonts (Google) -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">  <style>
+    :root{
+      --bg:#0f1720; /* dark */
+      --card:#0b1220;
+      --muted:#98a0aa;
+      --accent:#00bcd4; /* cyan accent */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+      --gap:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#07101a 0%, #0b1620 100%); color:#e6eef6; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; padding:30px 18px;
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:var(--glass);display:grid;place-items:center;font-weight:700}
+    .brand h1{margin:0;font-family:Poppins, Inter;font-size:18px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:flex;gap:30px;align-items:center;margin:36px 0;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px}
+    .hero-left{flex:1}
+    .kicker{color:var(--accent);font-weight:700;font-size:12px;letter-spacing:1px}
+    h2{margin:10px 0 6px;font-family:Poppins;font-size:28px}
+    p.lead{margin:0 0 16px;color:var(--muted);line-height:1.5}
+    .cta{display:inline-block;background:var(--accent);color:#021018;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    .hero-right{width:360px;max-width:40%;}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+
+    /* Projects */
+    section h3{font-size:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap);}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:12px}
+    .project img{width:100%;border-radius:8px;display:block}
+    .project h4{margin:10px 0 4px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    /* About / Contact */
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:#07111a;border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:inherit}
+    button{background:var(--accent);border:none;padding:10px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+
+    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:900px){
+      .hero{flex-direction:column}
+      .two-col{grid-template-columns:1fr}
+      .hero-right{max-width:none;width:100%}
+      nav{display:none}
+    }
+  </style></head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">⚒</div>
+        <div>
+          <h1>Rossercity Web <span style="font-size:12px;opacity:0.9">⚒ʳᶜ</span></h1>
+          <p>Création de sites modernes & performants</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projets</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header><main>
+  <section class="hero">
+    <div class="hero-left">
+      <div class="kicker">Rossercity Web</div>
+      <h2>Je crée des sites rapides, modernes et responsives</h2>
+      <p class="lead">Je conçois des sites vitrines et portfolios pensés pour l'utilisateur. Adaptation mobile, performances et design clair — prêt à convertir vos visiteurs.</p>
+      <a class="cta" href="#contact">Demander un devis</a>
+    </div>
+    <div class="hero-right">
+      <div class="card">
+        <h3>Offre rapide</h3>
+        <p style="color:var(--muted);margin:8px 0">Site vitrine simple • 1 page • Responsive • Déployé sur GitHub Pages</p>
+        <ul style="margin:8px 0 0;color:var(--muted);padding-left:18px">
+          <li>Design personnalisé</li>
+          <li>Hébergement & déploiement</li>
+          <li>Formulaire de contact</li>
+        </ul>
+        <div style="margin-top:12px"><strong>Prix indicatif</strong> — à partir de <strong>10€</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="margin-top:22px">
+    <h3>Projets récents</h3>
+    <div class="grid" style="margin-top:12px">
+      <article class="project">
+        <img src="assets/project1.png" alt="Capture du projet 1">
+        <h4>Portfolio interactif</h4>
+        <p>Site personnel avec animations, sections projets et contact.</p>
+      </article>
+
+      <article class="project">
+        <img src="assets/project2.png" alt="Capture du projet 2">
+        <h4>Landing produit</h4>
+        <p>Page de présentation optimisée pour conversion et capture d'emails.</p>
+      </article>
+
+      <article class="project">
+        <img src="assets/project3.png" alt="Capture du projet 3">
+        <h4>Site association</h4>
+        <p>Site simple et accessible pour une association locale.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" style="margin-top:24px">
+    <h3>À propos</h3>
+    <div class="two-col" style="margin-top:12px">
+      <div>
+        <p style="color:var(--muted)">Bonjour — je suis Rossercity. Je conçois des sites web modernes, priorisant la performance, l'accessibilité et la clarté. J'aime travailler avec des petites entreprises, des créateurs et des associations pour donner une présence en ligne professionnelle.</p>
+
+        <h4 style="margin-top:14px">Compétences</h4>
+        <ul style="color:var(--muted);padding-left:18px">
+          <li>HTML / CSS / JavaScript</li>
+          <li>React & frameworks modernes</li>
+          <li>Déploiement GitHub Pages</li>
+          <li>Design responsive & optimisation</li>
+        </ul>
+
+        <h4 style="margin-top:14px">Processus</h4>
+        <p style="color:var(--muted)">Brief → Maquette → Développement → Tests → Livraison & déploiement.</p>
+      </div>
+
+      <aside class="card">
+        <h4>Pourquoi travailler avec moi ?</h4>
+        <p style="color:var(--muted)">Réactivité, tarifs adaptés aux petits projets, et attention portée à l'expérience utilisateur. Signature : ⚒ʳᶜ</p>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="cta" href="#contact">Me contacter</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-top:24px">
+    <h3>Contact</h3>
+    <div style="margin-top:12px" class="two-col">
+      <div>
+        <p style="color:var(--muted)">Pour un devis ou une question, envoie un message via le formulaire ci-contre ou contacte-moi sur Discord / email.</p>
+        <p style="color:var(--muted)"><strong>Discord :</strong> Rossercity<br><strong>Email :</strong> contact.rossercityWeb@gmail.com</p>
+      </div>
+
+      <aside class="card">
+        <form action="ACTION_FORMSPREE" method="POST">
+          <input type="text" name="name" placeholder="Ton nom" required>
+          <input type="email" name="email" placeholder="Ton email" required>
+          <input type="text" name="subject" placeholder="Sujet">
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+          <button type="submit">Envoyer le message</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Rossercity Web ⚒ʳᶜ — Tout droits réserver</p>
+</footer>
+
+  </div>  <script>
+    // Small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script></body>
+</html>
